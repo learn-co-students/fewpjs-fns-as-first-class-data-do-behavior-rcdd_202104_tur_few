@@ -10,28 +10,26 @@ function handleClick(_e) {
 /* End Given Code, don't edit above here...*/
 
 /* Write your implementation of greet() */
-function greet(){
+function greet(timeString){
 
-  const inPutTime = document.getElementById("time").value
-
-  let myTime = inPutTime.split(':')
+  let myTime = timeString.split(':')
   let intHour=parseInt(myTime[0])
   let intMin=parseInt(myTime[1])
 
   
     if (intHour<12 &&  intMin<=60 && intMin>=0){
-      return messege="Good Morning"
+      return "Good Morning"
     }
-    else if (intHour>=12 && intHour<=17 && intMin<=60 && intMin>=0){
-      return messege ="Good Afternoon";
+    else if (intHour>=12 && intHour<=17){
+      return "Good Afternoon";
     }
-    else if (intHour>17 && intHour<=24 && intMin<=60 && intMin>=0){
-      return messege="Good Evening";
+    else if (intHour>17 && intHour<=24){
+      return "Good Evening";
     }
   }
   
 /* Write your implementation of displayMessage() */
 
 function displayMessage(_message){
-  document.getElementById("greeting").innerText = messege;
+  document.getElementById("greeting").innerText = _message;
 }
